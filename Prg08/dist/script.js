@@ -233,8 +233,8 @@ async function finishedTraining() {
     // nn.save("model", () => console.log("model was saved!"))
 }
 
-const flip = document.getElementById("test");
-flip.addEventListener("click", test);
+const testElement = document.getElementById("test");
+testElement.addEventListener("click", test);
 
 async function test() {
     console.log(training)
@@ -249,10 +249,10 @@ const modelDetails = {
 }
 nn.load(modelDetails, () => console.log("het model is geladen!"))
 
-const flop = document.getElementById("accuracy");
-flop.addEventListener("click", accuracy);
+const accuracyElement = document.getElementById("accuracy");
+accuracyElement.addEventListener("click", accuracy);
 
-const confusionMatrixElement = document.getElementById("confusionMatrix");
+// const confusionMatrixElement = document.getElementById("confusionMatrix");
 
 async function accuracy() {
     let correctPredictions = 0;
